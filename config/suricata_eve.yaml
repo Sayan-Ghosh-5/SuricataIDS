@@ -1,0 +1,12 @@
+# Excerpt from /etc/suricata/suricata.yaml -- enables EVE JSON alert logging
+outputs:
+  - eve-log:
+      enabled: yes
+      filetype: regular            # write to a plain file
+      filename: eve.json
+      community-id: yes
+      types:
+        - alert:
+            payload: no            # keep logs small; payload not used as a feature
+            metadata: yes
+        - flow                     # flow records give packet/byte counts and duration

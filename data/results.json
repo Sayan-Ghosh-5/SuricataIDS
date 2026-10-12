@@ -1,0 +1,260 @@
+{
+  "baseline": {
+    "A0": 6000,
+    "A1": 6000,
+    "TP": 1760,
+    "FP": 4240,
+    "TN": 0,
+    "FN": 0,
+    "FPR": 1.0,
+    "Precision": 0.29333333333333333,
+    "Recall": 1.0,
+    "F1": 0.45360824742268036,
+    "AlertReductionRate": 0.0
+  },
+  "proposed": {
+    "A0": 6000,
+    "A1": 2087,
+    "TP": 1488,
+    "FP": 599,
+    "TN": 3641,
+    "FN": 272,
+    "FPR": 0.1412735849056604,
+    "Precision": 0.7129851461427887,
+    "Recall": 0.8454545454545455,
+    "F1": 0.7735898102417469,
+    "AlertReductionRate": 65.21666666666667,
+    "n_escalate": 1402,
+    "n_review": 685,
+    "n_deprioritize": 3913,
+    "escalate_precision": 0.9029957203994294
+  },
+  "test_size": 6000,
+  "genuine": 1760,
+  "false_positive": 4240,
+  "thresholds": {
+    "T_LOW": 0.25,
+    "T_HIGH": 0.75
+  },
+  "tuned": {
+    "A0": 6000,
+    "A1": 3922,
+    "TP": 1663,
+    "FP": 2259,
+    "TN": 1981,
+    "FN": 97,
+    "FPR": 0.5327830188679246,
+    "Precision": 0.42401835798062215,
+    "Recall": 0.9448863636363637,
+    "F1": 0.5853572685674059,
+    "AlertReductionRate": 34.63333333333333,
+    "n_escalate": 1402,
+    "n_review": 2520,
+    "n_deprioritize": 2078,
+    "escalate_precision": 0.9029957203994294
+  },
+  "T_HIGH_tuned": 0.915,
+  "recall_target": 0.95,
+  "model_comparison": [
+    {
+      "Model": "Random Forest",
+      "ROC_AUC": 0.910628350128645,
+      "F1_at_0.5": 0.928273947246645,
+      "FPR": 0.1412735849056604,
+      "Recall": 0.8454545454545455,
+      "AlertReductionRate": 65.21666666666667
+    },
+    {
+      "Model": "Logistic Regression",
+      "ROC_AUC": 0.9139555638936535,
+      "F1_at_0.5": 0.9257437338955259,
+      "FPR": 0.24882075471698112,
+      "Recall": 0.8875,
+      "AlertReductionRate": 56.38333333333333
+    },
+    {
+      "Model": "Gradient Boosting",
+      "ROC_AUC": 0.918156826222127,
+      "F1_at_0.5": 0.9303071985327831,
+      "FPR": 0.08891509433962264,
+      "Recall": 0.821590909090909,
+      "AlertReductionRate": 69.61666666666667
+    }
+  ],
+  "rf_cv_auc_mean": 0.9187041195933826,
+  "rf_cv_auc_std": 0.003248852197628831,
+  "confusion_0.5": [
+    [
+      1368,
+      392
+    ],
+    [
+      228,
+      4012
+    ]
+  ],
+  "sweep": [
+    {
+      "T_HIGH": 0.5,
+      "Recall": 0.7772727272727272,
+      "AlertReductionRate": 73.4,
+      "FPR": 0.05377358490566038
+    },
+    {
+      "T_HIGH": 0.52,
+      "Recall": 0.7840909090909091,
+      "AlertReductionRate": 73.05,
+      "FPR": 0.05589622641509434
+    },
+    {
+      "T_HIGH": 0.54,
+      "Recall": 0.7897727272727273,
+      "AlertReductionRate": 72.68333333333334,
+      "FPR": 0.058726415094339623
+    },
+    {
+      "T_HIGH": 0.56,
+      "Recall": 0.7965909090909091,
+      "AlertReductionRate": 72.2,
+      "FPR": 0.06273584905660377
+    },
+    {
+      "T_HIGH": 0.58,
+      "Recall": 0.7994318181818182,
+      "AlertReductionRate": 71.78333333333333,
+      "FPR": 0.06745283018867924
+    },
+    {
+      "T_HIGH": 0.6,
+      "Recall": 0.8028409090909091,
+      "AlertReductionRate": 71.35000000000001,
+      "FPR": 0.07216981132075471
+    },
+    {
+      "T_HIGH": 0.62,
+      "Recall": 0.8045454545454546,
+      "AlertReductionRate": 70.96666666666667,
+      "FPR": 0.07688679245283019
+    },
+    {
+      "T_HIGH": 0.64,
+      "Recall": 0.8113636363636364,
+      "AlertReductionRate": 70.25,
+      "FPR": 0.08419811320754716
+    },
+    {
+      "T_HIGH": 0.66,
+      "Recall": 0.81875,
+      "AlertReductionRate": 69.48333333333333,
+      "FPR": 0.09198113207547169
+    },
+    {
+      "T_HIGH": 0.68,
+      "Recall": 0.8238636363636364,
+      "AlertReductionRate": 68.8,
+      "FPR": 0.09952830188679246
+    },
+    {
+      "T_HIGH": 0.7,
+      "Recall": 0.8289772727272727,
+      "AlertReductionRate": 68.0,
+      "FPR": 0.10872641509433963
+    },
+    {
+      "T_HIGH": 0.72,
+      "Recall": 0.8375,
+      "AlertReductionRate": 66.9,
+      "FPR": 0.12075471698113208
+    },
+    {
+      "T_HIGH": 0.74,
+      "Recall": 0.8443181818181819,
+      "AlertReductionRate": 65.86666666666666,
+      "FPR": 0.13254716981132075
+    },
+    {
+      "T_HIGH": 0.76,
+      "Recall": 0.8482954545454545,
+      "AlertReductionRate": 64.45,
+      "FPR": 0.1509433962264151
+    },
+    {
+      "T_HIGH": 0.78,
+      "Recall": 0.8556818181818182,
+      "AlertReductionRate": 62.916666666666664,
+      "FPR": 0.1695754716981132
+    },
+    {
+      "T_HIGH": 0.8,
+      "Recall": 0.8630681818181818,
+      "AlertReductionRate": 60.96666666666667,
+      "FPR": 0.19410377358490566
+    },
+    {
+      "T_HIGH": 0.82,
+      "Recall": 0.8755681818181819,
+      "AlertReductionRate": 58.38333333333333,
+      "FPR": 0.22547169811320755
+    },
+    {
+      "T_HIGH": 0.84,
+      "Recall": 0.8852272727272728,
+      "AlertReductionRate": 55.55,
+      "FPR": 0.2615566037735849
+    },
+    {
+      "T_HIGH": 0.86,
+      "Recall": 0.8960227272727272,
+      "AlertReductionRate": 51.849999999999994,
+      "FPR": 0.30943396226415093
+    },
+    {
+      "T_HIGH": 0.88,
+      "Recall": 0.9164772727272728,
+      "AlertReductionRate": 46.45,
+      "FPR": 0.37735849056603776
+    },
+    {
+      "T_HIGH": 0.9,
+      "Recall": 0.9346590909090909,
+      "AlertReductionRate": 40.266666666666666,
+      "FPR": 0.457311320754717
+    },
+    {
+      "T_HIGH": 0.92,
+      "Recall": 0.946590909090909,
+      "AlertReductionRate": 32.733333333333334,
+      "FPR": 0.5589622641509434
+    },
+    {
+      "T_HIGH": 0.94,
+      "Recall": 0.9607954545454546,
+      "AlertReductionRate": 23.416666666666668,
+      "FPR": 0.6849056603773584
+    },
+    {
+      "T_HIGH": 0.96,
+      "Recall": 0.9755681818181818,
+      "AlertReductionRate": 12.716666666666669,
+      "FPR": 0.8301886792452831
+    },
+    {
+      "T_HIGH": 0.98,
+      "Recall": 0.99375,
+      "AlertReductionRate": 3.0,
+      "FPR": 0.9601415094339623
+    }
+  ],
+  "top_features": {
+    "severity": 0.2374,
+    "signature_id": 0.1354,
+    "category": 0.1335,
+    "app_proto": 0.0665,
+    "dst_internal": 0.0467,
+    "flow_duration": 0.0366,
+    "bytes_per_pkt": 0.0335,
+    "bytes_toclient": 0.0333,
+    "total_bytes": 0.0323,
+    "src_port": 0.0306
+  }
+}
